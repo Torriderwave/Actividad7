@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudiantes</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <h1>Tabla de Administradores</h1>
+    <ul>
+        <li><a href= {% url 'home:indexapp' %}>Home</a></li>
+        <li><a href={% url 'home:estudianteapp' %}>Estudiantes</a></li>
+        <li><a href={% url 'home:administradoresapp' %}>Administradores</a></li>
+        <li><a href={% url 'home:acercaapp' %} >Acerca de</a></li>
+    </ul>
+    <table border="1">
+        <tr>
+            <td>Nombre</td>
+            <td>Usuario</td>
+            <td>Facultad</td>
+        </tr>
+        <tr>
+            <td>Jose Lopez</td>
+            <td>jlopez</td>
+            <td>Ingenieria</td>
+        </tr>
+        <tr>
+            <td>Luis Mendez</td>
+            <td>lmendez</td>
+            <td>Humanidades</td>
+        </tr>
+        <tr>
+            <td>Pedro Garcia</td>
+            <td>pgarcia</td>
+            <td>Derecho</td>
+        </tr>
+    </table>
+</body>
+</html>

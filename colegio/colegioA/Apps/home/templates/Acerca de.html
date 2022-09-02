@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+    <h1>Acerca de</h1>
+    <ul>
+        <li><a href= {% url 'home:indexapp' %}>Home</a></li>
+        <li><a href={% url 'home:estudianteapp' %}>Estudiantes</a></li>
+        <li><a href={% url 'home:administradoresapp' %}>Administradores</a></li>
+        <li><a href={% url 'home:acercaapp' %} >Acerca de</a></li>
+    </ul>
+    <p>Esta pagina fue creada por:</p>
+    <p>Pablo David Adonay Merida Velasquez</p>
+    <p>Carnet: 0903-19-22303</p>
+</body>
+</html>
