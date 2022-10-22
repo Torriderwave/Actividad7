@@ -16,8 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from Apps.home import views
-from .views import HomeView,EstudianteView,AdminView,AcercaView
-
+from .views import HomeView,EstudianteView,AdminView,AcercaView,CrearPublicacionView,CrearComentarioView,CrearArticuloView,CrearAutorizacionView,ListarEstudianteView,ListarAutorizacionView,ListarArticuloView,ComentarioView,ListarComentarioView
 from Apps.home.views import HomeView
 
 app_name='home'
@@ -25,5 +24,15 @@ urlpatterns = [
     path('', HomeView.as_view(), name='indexapp'),
     path('estudiante/', EstudianteView.as_view(), name='estudianteapp'),
     path('administradores/', AdminView.as_view(), name='administradoresapp'),
-    path('acerca_de/', AcercaView.as_view(), name='acercaapp')
+    path('acerca_de/', AcercaView.as_view(), name='acercaapp'),
+    path('comentarios/', ComentarioView.as_view(), name='acerca1app'),
+    path('crear publicacion/', CrearPublicacionView.as_view(),name='publiapp'),
+    path('crear comentario/', CrearComentarioView.as_view(),name='comeapp'),
+    path('crear articulo/', CrearArticuloView.as_view(),name='artiapp'),
+    path('crear autorizacion/', CrearAutorizacionView.as_view(),name='autoapp'),
+    path('listado de estudiantes/', ListarEstudianteView.as_view(), name='estudianteapp'),
+    path('listado de autorizaciones/', ListarAutorizacionView.as_view(), name='administradoresapp'),
+    path('listado de articulos/', ListarArticuloView.as_view(), name='acercaapp'),
+    path('listado de comentarios/', ListarComentarioView.as_view(), name='acerca1app'),
+
 ]

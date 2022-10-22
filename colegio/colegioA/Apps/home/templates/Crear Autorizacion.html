@@ -1,7 +1,7 @@
 {% extends 'carga.html'%}
 
 {% block titulo%}
-<h2>Acerca de</h2>
+    <h2>Crear Autorizacion</h2>
 {% endblock %}
 
 {% block navegacion%}
@@ -11,12 +11,15 @@
             <a class="btn btn-secondary" href={% url 'home:administradoresapp' %}>Administradores</a>
             <a class="btn btn-secondary" href={% url 'home:acercaapp' %} >Acerca de</a>
         </ul>
-
 {% endblock %}
 
+{% block formulario%}
+        <form method="post">
+            {% csrf_token %}
+            <h4>publicacion</h4> {{form.publicacion}}
+            <h4>Nombre de autorizador </h4> {{form.nombreau}}
+            <h4>tipo de autorizacion</h4> {{form.tipo1}}
+            <input class="btn btn-secondary" type="submit" name="guardar">
+        </form>
 
-{% block contenido%}
-    <p>Esta pagina fue creada por:</p>
-    <p>Pablo David Adonay Merida Velasquez</p>
-    <p>Carnet: 0903-19-22303</p>
 {% endblock %}

@@ -1,6 +1,6 @@
 import site
 from django.contrib import admin
-from .models import  Articulo, Autorizacion, Comentario, Curso, Estudiante, Publicaciones,  Telefono
+from .models import  Curso, Estudiante, Telefono, Publicaciones, Autorizacion, Articulo, Comentario
 # Register your models here.
 
 admin.site.register(Estudiante)

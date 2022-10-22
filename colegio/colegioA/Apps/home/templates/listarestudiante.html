@@ -1,0 +1,38 @@
+{% extends 'carga.html'%}
+
+{% block titulo%}
+<h2>Listado de Publicaciones</h2>
+{% endblock %}
+
+{% block navegacion%}
+        <ul>
+            <a class="btn btn-secondary" href= {% url 'home:indexapp' %}>Home</a>
+            <a class="btn btn-secondary" href={% url 'home:estudianteapp' %}>Estudiantes</a>
+            <a class="btn btn-secondary" href={% url 'home:administradoresapp' %}>Administradores</a>
+            <a class="btn btn-secondary" href={% url 'home:acercaapp' %} >Articulos</a>
+            <a class="btn btn-secondary" href={% url 'home:acerca1app' %} >Comentarios</a>
+        </ul>
+
+{% endblock %}
+
+{% block tablas%}
+
+    <table class="table table-primary">
+        <tr>
+            <td>Publicacion</td>
+            <td>Nombre</td>
+        </tr>
+        {% for est in object_list %}
+        <tr>
+            <td>
+                {{est.publicacion}}
+            </td>
+            <td>
+                {{est.nombre}}
+            </td>
+        </tr>
+
+        {% endfor %}
+    </table>
+
+{% endblock %}

@@ -1,16 +1,40 @@
 {% extends 'carga.html'%}
 
 {% block titulo%}
-    <h3>Inicio</h3>
+    <h2>Inicio</h2>
+{% endblock %}
+
+{% block navegacion%}
+        <ul>
+            <a class="btn btn-secondary" href= {% url 'home:indexapp' %}>Home</a>
+            <a class="btn btn-secondary" href={% url 'home:estudianteapp' %}>Estudiantes</a>
+            <a class="btn btn-secondary" href={% url 'home:administradoresapp' %}>Administradores</a>
+            <a class="btn btn-secondary" href={% url 'home:acercaapp' %} >Articulos</a>
+            <a class="btn btn-secondary" href={% url 'home:acerca1app' %} >Comentarios</a>
+        </ul>
+
+{% endblock %}
+
+{% block menu%}
+        <h2 >Crear Publicacion aca</h2>
+        <a class="btn btn-primary" href={% url 'home:publiapp' %} >Crear</a>
+
+        <h2>Crear Comentario aca</h2>
+        <a class="btn btn-primary" href={% url 'home:comeapp' %} >Crear</a>
+
+        <h2>Crear Articulo aca</h2>
+        <a class="btn btn-primary" href={% url 'home:artiapp' %} >Crear</a>
+
+        <h2>Crear Autorizacion aca</h2>
+        <a class="btn btn-primary" href={% url 'home:autoapp' %} >Crear</a>
+
 {% endblock %}
     
+
+    
 {% block contenido%}
-        <ul>
-            <li><a href= {% url 'home:indexapp' %}>Home</a></li>
-            <li><a href={% url 'home:estudianteapp' %}>Estudiantes</a></li>
-            <li><a href={% url 'home:administradoresapp' %}>Administradores</a></li>
-            <li><a href={% url 'home:acercaapp' %} >Acerca de</a></li>
-        </ul>
+
+
         <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
             Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, 
             cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería 

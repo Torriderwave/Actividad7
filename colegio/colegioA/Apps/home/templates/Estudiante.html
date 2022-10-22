@@ -1,18 +1,20 @@
 {% extends 'carga.html'%}
 
 {% block titulo%}
-<h3>Tabla de Administradores</h3>
+<h2>Tabla de Administradores</h2>
 {% endblock %}
-    
 
-{% block contenido%}
+{% block navegacion%}
+        <ul>
+            <a class="btn btn-secondary" href= {% url 'home:indexapp' %}>Home</a>
+            <a class="btn btn-secondary" href={% url 'home:estudianteapp' %}>Estudiantes</a>
+            <a class="btn btn-secondary" href={% url 'home:administradoresapp' %}>Administradores</a>
+            <a class="btn btn-secondary" href={% url 'home:acercaapp' %} >Acerca de</a>
+        </ul>
 
-    <ul>
-        <li><a href= {% url 'home:indexapp' %}>Home</a></li>
-        <li><a href={% url 'home:estudianteapp' %}>Estudiantes</a></li>
-        <li><a href={% url 'home:administradoresapp' %}>Administradores</a></li>
-        <li><a href={% url 'home:acercaapp' %} >Acerca de</a></li>
-    </ul>
+{% endblock %}
+
+{% block tablas%}
     <table border="1">
         <tr>
             <td>Nombre</td>
